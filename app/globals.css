@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ai {
+    /* Option 1: Fade in with zoom */
+    animation: fade-in-zoom 2s ease-in-out;
+    
+    /* Option 2: Slide in from the right */
+    /* uncomment the following line and comment out the line above to use slide-in */
+    /* animation: slide-in-right 2s ease-in-out; */
+  }
+  
+  .ap {
+    /* Option 1: Fade in with bounce */
+    animation: fade-in-bounce 1s ease-in-out;
+    
+    /* Option 2: Slide in from the bottom */
+    /* uncomment the following line and comment out the line above to use slide-in */
+    /* animation: slide-in-right 2s ease-in-out; */
+  }
+  
+  /* Animations for image */
+  @keyframes fade-in-zoom {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Animations for paragraph */
+  @keyframes fade-in-bounce {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    50% {
+      transform: translateY(-5px);
+    }
+    
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in-bottom {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .icon-link {
+    display: inline-block;
+    perspective: 1000px;
+  }
+  
+  .icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .icon:hover {
+    transform: translateY(-5px); /* Adjust the value as needed */
+  }
+  
