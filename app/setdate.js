@@ -18,12 +18,12 @@ const SetDate = () => {
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const [showImageDescription, setShowImageDescription] = useState(true);
+  const [showImageDescription, setShowImageDescription] = useState(false);
 
   useEffect(() => {
     const toggleInterval = setInterval(() => {
       setShowImageDescription(prevState => !prevState);
-    }, 8000); // Toggle between image and paragraph every 3 seconds
+    }, 12000); // Toggle between image and paragraph every 3 seconds
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
